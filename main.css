@@ -1,0 +1,150 @@
+body {
+    display: grid;
+    grid-template-columns: minmax(22em, 3fr) 7fr;
+    grid-template-rows: auto 1fr;
+    margin: 0;
+    font-family: sans-serif;
+    background: #d4d9dd;
+    color: #202020;
+    accent-color: #3057da;
+    user-select: none;
+}
+
+body.no-js :is(header, main, footer) {
+    display: none;
+}
+
+body.dark {
+    color-scheme: dark;
+    background: #3d4247;
+    color: #f2f2f2;
+}
+
+h2 {
+    opacity: 0.6;
+    font-size: 100%;
+    text-transform: uppercase;
+    margin: 0;
+}
+
+header,
+footer {
+    grid-column: 1 / 2;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    padding: 1em;
+    gap: 0.8em;
+}
+
+main {
+    grid-column: 2 / 3;
+    grid-row: 1 / 3;
+    display: grid;
+    place-items: center;
+    height: 100vh;
+    background: #f2f2f2;
+}
+
+.dark main {
+    background: #4c595e;
+}
+
+canvas {
+    max-width: 100vw;
+    aspect-ratio: 1/1;
+}
+
+footer {
+    padding-top: 0;
+}
+
+#shape-key {
+    font-family: monospace;
+    font-size: 140%;
+    width: 100%;
+    padding-block: 0.3em;
+    box-sizing: border-box;
+    border: 2px solid #3057dab0;
+    border-radius: 0.3em;
+}
+
+#shape-key.error {
+    border-color: #e04242;
+}
+
+#shape-key-error {
+    color: #e04242;
+    font-size: 90%;
+}
+
+.dark #shape-key-error {
+    color: #df6e6e;
+}
+
+button {
+    font-size: 100%;
+    width: 100%;
+}
+
+label {
+    display: flex;
+    gap: 0.2em;
+}
+
+input[type="checkbox"] {
+    width: 1.2em;
+    height: 1.2em;
+}
+
+.button-row {
+    display: flex;
+    gap: 0.8em;
+}
+
+#action-table {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 0.8em;
+    padding: 0.8em;
+    border: 1px solid #bbb4;
+    border-radius: 0.4em;
+}
+
+#action-table span {
+    font-size: 90%;
+    text-align: center;
+    opacity: 0.9;
+}
+
+@media (max-width: 800px) {
+    html {
+        height: 100%;
+    }
+
+    body {
+        grid-template-columns: unset;
+        grid-template-rows: auto 1fr auto;
+        height: 100%;
+    }
+
+    h2 {
+        display: none;
+    }
+
+    main {
+        grid-row: 2/3;
+        grid-column: 1/2;
+        height: unset;
+        background: unset;
+    }
+
+    .dark main {
+        background: unset;
+    }
+
+    #action-table {
+        padding: 0.4em;
+        gap: 0.4em;
+    }
+}

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <title>Shape Viewer</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link rel="stylesheet" media="screen" href="main.css" />
+        <link rel="stylesheet" media="print" href="print.css" />
+        <script src="main.js" type="module" defer></script>
+    </head>
+    <body class="no-js">
+        <script>
+            document.body.classList.remove("no-js");
+        </script>
+        <script src="theme.js"></script>
+        <noscript>This application requires JavaScript to be enabled.</noscript>
+
+        <header>
+            <h2>Settings</h2>
+            <label>
+                Dark Theme
+                <input type="checkbox" id="page-theme" />
+            </label>
+            <label>
+                Display Shadow
+                <input type="checkbox" id="display-shadow" checked />
+            </label>
+        </header>
+
+        <main>
+            <canvas id="shape-canvas" width="256" height="256">
+                Your web browser does not support HTML5 canvas.
+            </canvas>
+        </main>
+
+        <footer>
+            <h2>Shape</h2>
+            <div>
+                <input id="shape-key" type="text" autocomplete="off" spellcheck="false" />
+                <div id="shape-key-error">&nbsp;</div>
+            </div>
+            <div class="button-row">
+                <button id="copy-key">Copy Key</button>
+                <button id="copy-url">Copy URL</button>
+                <button id="random">Random</button>
+            </div>
+            <div id="action-table">
+                <span>64px</span>
+                <span>128px</span>
+                <span>256px</span>
+                <span>512px</span>
+                <button class="copy" data-resolution="64">Copy</button>
+                <button class="copy" data-resolution="128">Copy</button>
+                <button class="copy" data-resolution="256">Copy</button>
+                <button class="copy" data-resolution="512">Copy</button>
+                <button class="save" data-resolution="64">Save</button>
+                <button class="save" data-resolution="128">Save</button>
+                <button class="save" data-resolution="256">Save</button>
+                <button class="save" data-resolution="512">Save</button>
+            </div>
+        </footer>
+    </body>
+</html>
