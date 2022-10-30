@@ -70,6 +70,7 @@ copyUrlButton.addEventListener("click", () => {
 
 randomButton.addEventListener("click", () => {
     lastGoodKey = generateRandomKey();
+    shapeKeyInput.value = lastGoodKey;
     updateUrl(lastGoodKey);
     renderShape(shapeCanvas, lastGoodKey, displayShadowCheckbox.checked);
 });
