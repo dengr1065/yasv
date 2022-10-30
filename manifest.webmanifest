@@ -3,8 +3,8 @@
     "name": "Shape Viewer",
     "short_name": "YASV",
     "display": "standalone",
-    "background_color": "#3d4247",
-    "theme_color": "#4c595e",
+    "background_color": "#4c595e",
+    "theme_color": "#3d4247",
     "icons": [
         {
             "src": "/yasv/icon-512.png",
