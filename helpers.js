@@ -1,5 +1,5 @@
-export const allShapes = ["C", "R", "S", "W"];
-export const allColors = ["r", "g", "b", "y", "p", "c", "w", "u"];
+const allShapes = ["C", "R", "S", "W"];
+const allColors = ["r", "g", "b", "y", "p", "c", "w", "u"];
 
 function randomItem(array) {
     return array[Math.round(Math.random() * (array.length - 1))];

@@ -93,10 +93,11 @@ resButtons.forEach((button) => {
 });
 
 // Initial page load: read the key from URL
-shapeKeyInput.value = location.search.slice(1);
-if (validateKey(shapeKeyInput.value.trim()) === false) {
-    lastGoodKey = shapeKeyInput.value.trim();
+const initialKey = location.search.slice(1).trim();
+if (validateKey(initialKey) === false) {
+    lastGoodKey = initialKey;
 }
 
+shapeKeyInput.value = initialKey;
 updateUrl(lastGoodKey);
 renderShape(shapeCanvas, lastGoodKey, displayShadowCheckbox.checked);
