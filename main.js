@@ -99,6 +99,6 @@ if (validateKey(initialKey) === false) {
     lastGoodKey = initialKey;
 }
 
-shapeKeyInput.value = initialKey;
+shapeKeyInput.value = lastGoodKey;
 updateUrl(lastGoodKey);
 renderShape(shapeCanvas, lastGoodKey, displayShadowCheckbox.checked);
